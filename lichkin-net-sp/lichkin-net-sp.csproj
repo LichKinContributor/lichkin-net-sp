@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="lichkin-net-utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lichkin-net-utils\lichkin-net-utils\bin\Debug\lichkin-net-utils.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,8 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="LichKin\IO\Ports\abstract\SerialPortCMDEventHandlerImpl.cs" />
+    <Compile Include="LichKin\IO\Ports\interface\SerialPortCMDEventHandler.cs" />
+    <Compile Include="LichKin\IO\Ports\internal\SerialPortCMD.cs" />
+    <Compile Include="LichKin\IO\Ports\internal\SerialPortCMDQueue.cs" />
+    <Compile Include="LichKin\IO\Ports\SerialPortConfigLoader.cs" />
+    <Compile Include="LichKin\IO\Ports\SerialPortX-Close.cs" />
+    <Compile Include="LichKin\IO\Ports\SerialPortX-Constructor.cs" />
+    <Compile Include="LichKin\IO\Ports\SerialPortX-EnqueueBytes.cs" />
+    <Compile Include="LichKin\IO\Ports\SerialPortX-Open.cs" />
+    <Compile Include="LichKin\IO\Ports\SerialPortX-WriteBytes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
